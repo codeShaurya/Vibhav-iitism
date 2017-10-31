@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"   integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">  
+  <style>
+    body,
+    html {
+      height: 100%;
+      color: #777;
+      background: #2b2b2b;	
+      /*background: black;*/
+      font-size: 16px;
+      font-weight:300;
+      margin-top: 0;  
+      font-family: 'Cinzel', serif;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: .5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+    a:hover {
+      transform: 1
+    }
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3,
+    .bgimg-4{
+      position: relative;
+      opacity: 0.65;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .bgimg-1 {
+      background-image: url("./image/FRONT.jpg");
+      min-height: 100%;
+    }
+
+    .bgimg-2 {
+      background-image: url("./image/aboutes.png");
+      min-height: 70%;
+    }
+
+    .bgimg-3 {
+      background-image: url("./image/ARIAL_VIEW.jpg");
+      min-height: 70%;
+    }
+     .bgimg-4 {
+      background-image: url("./image/front2.jpg");
+      min-height: 50%;
+    }
+
+    .caption {
+      position: absolute;
+      top: 20%;
+      width: 100%;
+      text-align: center;
+      color: #000;
+    }
+
+    /*span {
+      padding: 100px;
+    }*/
+
+    .caption span .border {
+      border: none;
+      color: #fff;
+      font-size: 25px;
+      letter-spacing: 10px;
+    }
+    .caption1 {
+      position: absolute;
+      left: 10%;
+      width: 80%;
+      text-align: center;
+      color: #000;
+    }
+
+    /*span {
+      padding: 100px;
+    }
+     .caption1 span .border1 {
+      border: none;
+      color: #fff;
+      font-size: 25px;
+      letter-spacing: 10px;
+    }*/
+
+    h3 {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font: 20px "Lato", sans-serif;
+      color: #111;
+    }
+
+
+    @media only screen and (max-device-width: 1024px) {
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3,
+      .bgimg-4 {
+        background-attachment: scroll;
+      }
+    }
+    @media only screen and (max-device-width: 660px) {
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3,
+      .bgimg-4 {
+        background-attachment: scroll;
+      }
+    }
+    @media only screen and (min-device-width: 50px) {
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3,
+      .bgimg-4 {
+        background-attachment: fixed;
+      }
+    }
+    @media only screen and (min-device-width: 50px) {
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3,
+      .bgimg-4 {
+        background-attachment: fixed;
+      }
+    }
+
+
+    .btn{
+  position: fixed;
+  top:50px;
+  right: 30px;
+  background-color: black;            
+  text-decoration: none;
+  border: 2px solid;
+  color: white;
+  padding: 17px;
+  border-radius: 15px;
+  font-size: 27px;
+}
+
+/*.btn1{
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  text-decoration: none;
+  border: 2px solid;
+  color: #9973f2;
+  padding: 20px;
+  border-radius: 15px;
+}
+*/
+/*#logo{
+  float: right;
+  right: 30px;
+  top:20px;
+  position: fixed;
+}
+*/
+footer {
+  background: #2b2b2b;
+  text-align: center;
+  color: #ddd;
+  height: 40px;
+  position: relative;
+}
+/*
+footer ul.social-networks li {
+  display:inline;
+  align-content: flex-end;
+}
+
+footer ul.social-networks li i {
+  display:inline-block;
+}
+
+footer ul.social-networks li a {
+  color: #5e5e5e;
+  margin: 0 5px;
+}
+
+footer ul.social-networks li a:hover {
+  text-decoration:none;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+footer ul.social-networks li i.icon-bgdark {
+  background:   #C0C0C0 ;
+  color: #7B68EE;
+}
+
+footer ul.social-networks li a i.icon-twitter:hover {
+  background: #5ad2eb;
+  color: #fff;
+}
+footer ul.social-networks li a i.icon-dribbble:hover {
+  background: cornflowerblue;
+  color: white;
+}
+*/
+
+
+/* bg */
+
+i.icon-bgdark {
+  color:  grey;
+  background: black;
+}
+i.icon-bgdark:hover {
+  color: white;
+  background-color: #627aac;
+}
+i.icon-bgdark.active:hover {
+  color: #f7f7f7;
+  background: #333;
+}
+
+/* rounded */
+i.icon-rounded {
+  display: inline-block;
+  border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+  -o-border-radius: 6px !important;
+  -ms-border-radius: 6px !important;
+  text-align: center;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 24px !important;
+}
+
+.icon-rounded.icon-2x{
+  width: 48px !important;
+  height: 48px !important;
+  line-height: 48px !important;
+}
+
+
+/* circled */
+i.icon-circled {
+  display: inline-block;
+  border-radius: 1000px !important;
+  -moz-border-radius: 1000px !important;
+  -webkit-border-radius: 1000px !important;
+  -o-border-radius: 1000px !important;
+  -ms-border-radius: 1000px !important;
+  text-align: center;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 24px !important;
+}
+
+.icon-circled.icon-2x{
+  width: 48px !important;
+  height: 48px !important;
+  line-height: 48px !important;
+}
+i.icon-white {
+  color:#fff;
+}
+
+
+ .playstore{
+  position: fixed;
+  top: 0px;
+  right:-8px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 100px) {
+    .first-content {
+        font-size: 10px;
+    }
+}
+
+#playstoreicon {
+    position: fixed;
+    animation-name: playicon;
+    animation-duration: 4s;
+    animation-direction: reverse;
+    animation-iteration-count: 3;   
+}
+ @media screen and (max-height: 144px) {
+    .caption img{
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+
+
+
+#controler
+{
+position: fixed;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+@keyframes playicon {
+    0%   { right:0px; bottom:0px;}
+    50%  { right:0px; bottom:400px;background-color: red;}
+    100% { right:0px; bottom:0px;background-color: blue;}
+}
+
+</style>
+</head>
+
+<body>
+  
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <div id="drawer1" class="active">
+      <a href="./Home.html">Home</a>
+    </div>
+    <div id="drawer3">
+      <a href="./events.html">Events</a>
+      <div id="drawer3">
+        <a href="./contact-us.html">Contact-Us</a>
+      </div>
+    </div>
+  </div>
+
+  <span style="font-size:40px;cursor:pointer;border:1px solid;background-color: black;color: white;padding-left: 10px; padding-right: 10px;margin:40px;" onclick="openNav()">&#9776;
+  </span>
+  <div class="bgimg-1">
+    <div class="caption1" style="top: 13%;">
+    <img src="./image/logo.png" width="80%">  
+     </div>
+  </div>
+
+  <div style="color: white;background-color:#8D8888;font-size: 22px;padding:50px 80px;text-align: justify;" class="first-content">
+    <h3 style="text-align:center;font-weight: bold;font-size: 40px;font-family: 'Comfortaa', cursive;"> About VIBHAV</h3>
+    <p>
+      Vibhav 2k17is the Annual Technical Fest of the Electrical Engineering Society. We aim to bring together students of the different society of different departments to develop new break-thoughs in their respective fields of interest that might later h elp to bring about a revolution in that field. We wish to provide a platform for students to present their ideas and showcase their talents in front of the best in the country. The event spansacross an entire day of intense contests, chanllenging problems and spectacular presentations here in IIT(ISM)Dhanbad. If you have got what it takes to stand out among the rest, wee welcome you here at Vibhav.
+    </p>
+  </div>
+
+  <div class="bgimg-2">
+    <div class="caption">
+      <img src="./image/ee.png" width="700px">
+    </div> <div style="color: white;background-color:#8D8888;padding:50px 80px;text-align: justify;font-size: 22px;">
+ <h3 style="text-align:center;font-weight: bold;font-size: 40px;font-family: 'Comfortaa', cursive;">About Electrical Engineering Society</h3>
+    <p>Electrical Engineering Society came in existence in the year ---- when individuals with a passion for creativity, innovation and all things E.Tech. took an initiative to start something different and add a new dimension to the academe – providing a platform for students to discuss new ideas and present research and to help create an environment that encourages students to work together in such a manner that they develop the necessary skills required to work on real life projects and put their presence of mind in action blending it with the theoretical knowledge </p>
+  </div>
+
+
+  <div class="bgimg-3">
+    <div class="caption">
+      <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Indian_Institute_of_Technology_%28Indian_School_of_Mines%29%2C_Dhanbad_Logo.png" width="400px" height="400px">
+    </div>
+  </div>
+
+  <div style="color: white;background-color:#8D8888;padding:50px 80px;text-align: justify;font-size: 22px;">
+ <h3 style="text-align:center;font-weight: bold;font-size: 40px;font-family: 'Comfortaa', cursive;">About IIT(ISM)</h3>
+    <p>
+    The Indian National Congress at its XVII Session of December 1901 passed a resolution stating that “in view of the fact that the tendency of recent legislation namely, The Indian Mines Act VII of 1901, is that all Indian mines must be kept under the supervision of mining experts, the Congress is of opinion that a Government College of Mining Engineering be established in some suitable place in India on the models of the Royal School of Mines in England, Mining Colleges of Japan and at other places in the continent”. The McPherson Committee formed by Govt. of India, recommended the establishment of an institution for imparting education in the fields of Mining and Geology, whose report, submitted in 1920, formed the main basis for establishment of the Indian School of Mines, Dhanbad. </p>
+  </div>
+
+  <div class="bgimg-4">
+    <div class="caption">      </span>
+    </div>
+  </div>
+
+  <!-- <a class="btn" href="./events.html" ><strong>Events</strong>  </a> -->
+  <div class="playstore" id="" style="display: inline-flex; text-align: justify;color: #68eaff">
+      <p style="padding-top: 9px;">For Registration <br>Download VIBHAV App </p>
+          <a href="https://play.google.com/store/apps/details?id=com.vibhav2k17.android.vibhav2k17" style="text-decoration: none" target="_blank" >
+   <img src="./image/vibhavapp.png" height="70px" width="160px"> </a>
+  </div>
+  
+  <!-- <a href="https://www.facebook.com/vibhav.iitismdhanbad/" target="_blank" class="fbpage" title="Fb">
+    <i class="icon-circled icon-bgdark icon-dribbble icon-2x fa fa-fw fa-facebook"></i>
+  </a>
+  <a href="mail:code.shaurya@gmail.com" class="gpage" title="Fb">
+    <i class="icon-circled icon-bgdark icon-dribbble icon-2x fa fa-fw fa-send"></i>
+  </a> -->
+<footer>
+    <div class="container">
+        <div class="row ">
+            <div class="footer-col col-md-12">
+                <p class="copyright">
+                <div class="credits">
+                    <h1>Electrical Engineering Society</h1>
+                </div>
+                &copy;Vibhav 2017
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "350px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
